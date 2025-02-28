@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2025 at 04:39 PM
+-- Generation Time: Feb 28, 2025 at 01:04 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `lims_db`
+-- Database: `somer_db`
 --
 
 -- --------------------------------------------------------
@@ -28,23 +28,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `u_id` int(11) NOT NULL,
-  `u_fname` varchar(50) NOT NULL,
-  `u_lname` varchar(50) NOT NULL,
-  `u_contact` varchar(20) NOT NULL,
-  `u_type` varchar(20) NOT NULL,
-  `u_email` varchar(100) NOT NULL,
+  `u_id` int(10) NOT NULL,
+  `u_fname` varchar(255) NOT NULL,
+  `u_lname` varchar(255) NOT NULL,
+  `u_contact` varchar(50) NOT NULL,
+  `u_type` varchar(255) NOT NULL,
+  `u_email` varchar(255) NOT NULL,
   `u_un` varchar(50) NOT NULL,
   `u_pass` varchar(50) NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`u_id`, `u_fname`, `u_lname`, `u_contact`, `u_type`, `u_email`, `u_un`, `u_pass`, `status`) VALUES
-(1, 'Keycee', 'Bolambot', '09493598037', 'Librarian', 'keycee@gmail.com', 'keycre_12', 'keycre121704', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +57,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `u_id` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

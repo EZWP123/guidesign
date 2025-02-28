@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package limsgui;
+package myapp;
 
+import myapp.loginForm;
 import config.dbConnect;
 import java.sql.ResultSet;
 import java.sql.SQLException;

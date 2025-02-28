@@ -15,7 +15,7 @@ public class dbConnect {
        // constructor to connect to our database
         public dbConnect(){
             try{
-                connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/lims_db", "root", "");
+                connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/somer_db", "root", "");
             }catch(SQLException ex){
                     System.out.println("Can't connect to database: "+ex.getMessage());
             }

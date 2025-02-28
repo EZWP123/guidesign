@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
-import limsgui.loginForm;
+import myapp.loginForm;
 
 /**
  *
