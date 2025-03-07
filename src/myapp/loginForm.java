@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package myapp;
 
 import admin.UserDashboard;
@@ -14,10 +10,10 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import myapp.registrationForm;
 
-/**
- *
- * @author Keycee Bolambot
- */
+
+
+
+ 
 public class loginForm extends javax.swing.JFrame {
 
     
@@ -180,42 +176,45 @@ public class loginForm extends javax.swing.JFrame {
     }//GEN-LAST:event_blexitActionPerformed
 
     private void bloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bloginActionPerformed
-        if (username.getText().isEmpty() || passs.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "All fields are required");
-            return;
-        }
+        
+
+        
         if(loginAcc(username.getText(),passs.getText())){
-              if(!status.equals("Active")){
-           JOptionPane.showMessageDialog(null,"In-Active Account, Contact the Admin!");
-              }else{
-           JOptionPane.showMessageDialog(null,"Login Success!");
-            if(type.equals("Admin")){
-           adminDashboard ads =new adminDashboard();
-           ads.setVisible(true);
-           this.dispose();
-              }else if(type.equals("User")){
-               UserDashboard usrd = new UserDashboard();
-               usrd.setVisible(true);
-               this.dispose();
-              }else{
-                JOptionPane.showMessageDialog(null,"No Account type found, Contact the Admin");
-              }
-              }
-       }else{
-            JOptionPane.showMessageDialog(null,"Login Failed!");
-               
-        }
+            if(!status.equals("Active")){
+            JOptionPane.showMessageDialog(null,"In-Active Account,Contact the Admin");
+        }else {
+            
+              
+                   if(type.equals("Admin")){                
+                       JOptionPane.showMessageDialog(null,"Login Successfully!");
+                        adminDashboard ads = new adminDashboard();
+                        ads.setVisible(true);
+                        this.dispose();
+                        
+                   }else if(type.equals("User")){
+                        JOptionPane.showMessageDialog(null,"Login Successfully!");
+                        UserDashboard usf = new UserDashboard();
+                        usf.setVisible(true);
+                        this.dispose();
+                        
+                   }else{
+                        JOptionPane.showMessageDialog(null,"No account type found,Contact the Admin");
+                   
+                }
+            
+    
+            }
+            
+        }else{
+          JOptionPane.showMessageDialog(null,"invalid Account!");  
+    } 
     }//GEN-LAST:event_bloginActionPerformed
 
     private void bloginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bloginMouseClicked
-        adminDashboard adm = new adminDashboard();
-        adm.setVisible(true);
-        this.dispose();
+     
     }//GEN-LAST:event_bloginMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -243,7 +242,7 @@ public class loginForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new loginForm().setVisible(true);
+                new loginForm().setVisible(true); 
             }
         });
     }

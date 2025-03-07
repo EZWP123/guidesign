@@ -7,7 +7,6 @@ package admin;
 
 /**
  *
- * @author Keycee Bolambot
  */
 public class adminDashboard extends javax.swing.JFrame {
 
@@ -28,7 +27,6 @@ public class adminDashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         navi = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         gouser = new javax.swing.JButton();
         Mainpanel = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
@@ -40,9 +38,6 @@ public class adminDashboard extends javax.swing.JFrame {
         navi.setBackground(new java.awt.Color(0, 102, 102));
         navi.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
         navi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/userrs.png"))); // NOI18N
-        navi.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 50, 50));
 
         gouser.setBackground(new java.awt.Color(102, 102, 102));
         gouser.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -83,7 +78,7 @@ public class adminDashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void gouserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gouserActionPerformed
-
+        
     }//GEN-LAST:event_gouserActionPerformed
 
     private void gouserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gouserMouseClicked
@@ -132,7 +127,6 @@ public class adminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel Mainpanel;
     private javax.swing.JButton gouser;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel navi;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,7 +12,6 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author Keycee Bolambot
  */
 public class adminUsers extends javax.swing.JFrame {
 
@@ -47,7 +46,6 @@ public class adminUsers extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         navi = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         users_tbl = new javax.swing.JTable();
@@ -81,9 +79,6 @@ public class adminUsers extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         navi.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 230, 12));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/userb.png"))); // NOI18N
-        navi.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 110, 110));
-
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setText("USERS");
         navi.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 90, 30));
@@ -101,7 +96,7 @@ public class adminUsers extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(users_tbl);
 
-        Mainpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 202, 700, 430));
+        Mainpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 700, 430));
 
         delete.setBackground(new java.awt.Color(102, 102, 102));
         delete.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -137,21 +132,16 @@ public class adminUsers extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -211,7 +201,6 @@ public class adminUsers extends javax.swing.JFrame {
     private javax.swing.JButton add;
     private javax.swing.JButton delete;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;

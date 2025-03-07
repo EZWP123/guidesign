@@ -7,7 +7,6 @@ package admin;
 
 /**
  *
- * @author Keycee Bolambot
  */
 public class UserDashboard extends javax.swing.JFrame {
 
@@ -29,7 +28,6 @@ public class UserDashboard extends javax.swing.JFrame {
 
         navi = new javax.swing.JPanel();
         gouser = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         Mainpanel = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -54,9 +52,6 @@ public class UserDashboard extends javax.swing.JFrame {
             }
         });
         navi.add(gouser, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 130, 50));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/userrs.png"))); // NOI18N
-        navi.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 50, 50));
 
         Mainpanel.setBackground(new java.awt.Color(0, 153, 153));
         Mainpanel.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
@@ -152,7 +147,6 @@ public class UserDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel Mainpanel;
     private javax.swing.JButton gouser;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel navi;
     // End of variables declaration//GEN-END:variables
 }
