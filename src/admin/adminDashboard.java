@@ -5,6 +5,10 @@
  */
 package admin;
 
+import config.Session;
+import javax.swing.JOptionPane;
+import myapp.loginForm;
+
 /**
  *
  */
@@ -27,32 +31,34 @@ public class adminDashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         navi = new javax.swing.JPanel();
-        gouser = new javax.swing.JButton();
+        acc_name = new javax.swing.JLabel();
+        acc_lname = new javax.swing.JLabel();
         Mainpanel = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        gouser = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         navi.setBackground(new java.awt.Color(0, 102, 102));
         navi.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
         navi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gouser.setBackground(new java.awt.Color(102, 102, 102));
-        gouser.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        gouser.setText("USERS");
-        gouser.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                gouserMouseClicked(evt);
-            }
-        });
-        gouser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gouserActionPerformed(evt);
-            }
-        });
-        navi.add(gouser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 130, 50));
+        acc_name.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_name.setText("ADMIN");
+        navi.add(acc_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 270, 40));
+
+        acc_lname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_lname.setText("ADMIN");
+        navi.add(acc_lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 270, 40));
 
         getContentPane().add(navi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 280, 570));
 
@@ -72,9 +78,25 @@ public class adminDashboard extends javax.swing.JFrame {
 
         Mainpanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 80));
 
+        gouser.setBackground(new java.awt.Color(102, 102, 102));
+        gouser.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        gouser.setText("USERS");
+        gouser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                gouserMouseClicked(evt);
+            }
+        });
+        gouser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gouserActionPerformed(evt);
+            }
+        });
+        Mainpanel.add(gouser, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, 130, 50));
+
         getContentPane().add(Mainpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 650));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void gouserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gouserActionPerformed
@@ -86,6 +108,25 @@ public class adminDashboard extends javax.swing.JFrame {
        adu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_gouserMouseClicked
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+    Session sess = Session.getInstance();
+    if(sess.getUid()==0){
+    JOptionPane.showMessageDialog(null, " No Account, Log in sah!");
+    loginForm lf = new loginForm();
+    lf.setVisible(true);
+    this.dispose();
+    
+    
+    
+    
+}
+
+
+
+acc_name.setText(""+sess.getU_fname());
+acc_lname.setText(""+sess.getU_lname());
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -125,6 +166,8 @@ public class adminDashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private javax.swing.JPanel Mainpanel;
+    private javax.swing.JLabel acc_lname;
+    private javax.swing.JLabel acc_name;
     private javax.swing.JButton gouser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel navi;

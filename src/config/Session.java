@@ -11,7 +11,7 @@ package config;
  */
 public class Session {
     private static Session instance;
-      private String uid;
+      private int uid;
     private String u_fname;
     private String u_lname;
     private String u_contact;
@@ -19,7 +19,7 @@ public class Session {
     private String u_email;
     private String u_un;
    
-    private String u_status;
+    private String status;
 
     
     private Session(){
@@ -27,19 +27,22 @@ public class Session {
   
     }
 
-    public static Session getInstance() {
+    public static synchronized Session getInstance() {
+       if(instance == null){
+           instance = new Session();
+       }
         return instance;
     }
 
-    public static void setInstance(Session instance) {
-        Session.instance = instance;
-    }
+   public static boolean isIntanceEmpty(){
+       return instance == null;
+   }
 
-    public String getUid() {
+    public int getUid() {
         return uid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(int uid) {
         this.uid = uid;
     }
 
@@ -91,14 +94,15 @@ public class Session {
         this.u_un = u_un;
     }
 
-    public String getU_status() {
-        return u_status;
+    public String getStatus() {
+        return status;
     }
 
-    public void setU_status(String u_status) {
-        this.u_status = u_status;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
+   
    
    
     

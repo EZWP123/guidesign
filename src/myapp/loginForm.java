@@ -1,8 +1,9 @@
 
 package myapp;
 
-import admin.UserDashboard;
+import user.UserDashboard;
 import admin.adminDashboard;
+import config.Session;
 import config.dbConnect;
 import java.awt.Color;
 import java.sql.ResultSet;
@@ -33,6 +34,18 @@ public class loginForm extends javax.swing.JFrame {
            if(resultSet.next()){
                status = resultSet.getString("status");
                type = resultSet.getString("u_type");
+               Session sess = Session.getInstance();
+               sess.setUid(resultSet.getInt("u_id"));
+               sess.setU_fname(resultSet.getString("u_fname"));
+               sess.setU_lname(resultSet.getString("u_lname"));
+               sess.setU_fname(resultSet.getString("u_fname"));
+               sess.setU_contact(resultSet.getString("u_contact"));
+               sess.setU_type(resultSet.getString("u_type"));
+               sess.setU_email(resultSet.getString("u_email"));
+               sess. setU_un(resultSet.getString("u_un"));
+
+
+               
                return true;
            }else{
                return false;

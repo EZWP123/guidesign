@@ -5,6 +5,7 @@
  */
 package admin;
 
+import config.Session;
 import config.dbConnect;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -47,6 +48,8 @@ public class adminUsers extends javax.swing.JFrame {
         navi = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        acc_id = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         users_tbl = new javax.swing.JTable();
         delete = new javax.swing.JButton();
@@ -54,6 +57,11 @@ public class adminUsers extends javax.swing.JFrame {
         update = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         Mainpanel.setBackground(new java.awt.Color(0, 153, 153));
         Mainpanel.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
@@ -82,6 +90,16 @@ public class adminUsers extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setText("USERS");
         navi.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 90, 30));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Current User:");
+        navi.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 280, 40));
+
+        acc_id.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_id.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_id.setText("ID");
+        navi.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 280, 40));
 
         Mainpanel.add(navi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 280, 570));
 
@@ -145,6 +163,7 @@ public class adminUsers extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
@@ -159,6 +178,12 @@ public class adminUsers extends javax.swing.JFrame {
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         
     }//GEN-LAST:event_updateActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+    Session sess = Session.getInstance();
+    acc_id.setText(""+sess.getUid());
+
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -198,9 +223,11 @@ public class adminUsers extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private javax.swing.JPanel Mainpanel;
+    private javax.swing.JLabel acc_id;
     private javax.swing.JButton add;
     private javax.swing.JButton delete;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
