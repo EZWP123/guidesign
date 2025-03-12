@@ -1,6 +1,7 @@
 
 package myapp;
 
+import admin.adminUsers;
 import myapp.loginForm;
 import config.dbConnect;
 import java.sql.ResultSet;
@@ -303,30 +304,38 @@ public class registrationForm extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
   
+      
+        
         if (fname.getText().isEmpty() 
         || lname.getText().isEmpty() 
-        || email.getText().isEmpty() 
-        || phone.getText().isEmpty()
+        || phone.getText().isEmpty() 
+        || email.getText().isEmpty()
         || un.getText().isEmpty() 
         || pass.getText().isEmpty()) {
         JOptionPane.showMessageDialog(null, "All fields are required");
-        return;
+        }else if(pass.getText().length()<8){
+            JOptionPane.showMessageDialog(null, "password character should be 8 above");
+            pass.setText("");
+            
     } else if (duplicateCheck()) {
         System.out.println("Duplicate Exist");
-         return;
+        
     } else {
         dbConnect dbc = new dbConnect();
-        if (dbc.insertData("INSERT INTO users (u_fname, u_lname, u_contact, u_email, u_un, u_pass, u_type, status)"
+        if(dbc.insertData("INSERT INTO users (u_fname, u_lname, u_contact, u_email, u_un, u_pass, u_type, status)"
                 + "VALUES('" + fname.getText() + "','" + lname.getText() + "', '" + phone.getText() + "',"
                 + " '" + email.getText() + "', '" + un.getText() + "', '" + pass.getText() + "',"
-                + " '" + type.getSelectedItem() + "', 'Pending')") == 0) {
-        } else {
-            JOptionPane.showMessageDialog(null, "Registered Successfully!");
-            loginForm lfr = new loginForm();
-            lfr.setVisible(true);
+                + " '" + type.getSelectedItem() + "', 'Pending')")==0)
+        {
+             JOptionPane.showMessageDialog(null, "Registered Successfully!");
+            adminUsers au = new adminUsers();
+            au.setVisible(true);
             this.dispose();
+        } else {
+           JOptionPane.showMessageDialog(null, "Registered Successfully!");
+           
         }
-}
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed

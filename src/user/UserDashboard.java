@@ -129,17 +129,11 @@ public class UserDashboard extends javax.swing.JFrame {
     JOptionPane.showMessageDialog(null, " No Account, Log in sah!");
     loginForm lf = new loginForm();
     lf.setVisible(true);
-    this.dispose();
-    
-    }else{
-    
-    
-
-
-
-
+    this.dispose(); 
+}else{
 acc_name.setText(""+sess.getU_fname());
-    }                                     // TODO add your handling code here:
+
+    }                   // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
 
     /**

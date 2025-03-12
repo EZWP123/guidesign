@@ -115,19 +115,14 @@ public class adminDashboard extends javax.swing.JFrame {
     JOptionPane.showMessageDialog(null, " No Account, Log in sah!");
     loginForm lf = new loginForm();
     lf.setVisible(true);
-    this.dispose();
-    
-    
-    
-    
-}
-
-
-
+    this.dispose(); 
+}else{
 acc_name.setText(""+sess.getU_fname());
 acc_lname.setText(""+sess.getU_lname());
     }//GEN-LAST:event_formWindowActivated
-
+    
+    
+    }
     /**
      * @param args the command line arguments
      */
