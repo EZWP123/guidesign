@@ -5,7 +5,9 @@ import user.UserDashboard;
 import admin.adminDashboard;
 import config.Session;
 import config.dbConnect;
+import config.passwordHasher;
 import java.awt.Color;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -28,10 +30,22 @@ public class loginForm extends javax.swing.JFrame {
     static String type;
    public static boolean loginAcc(String username, String passs ){
        dbConnect dbc = new dbConnect();
+       
+       
+       
        try{
-            String query = "SELECT * FROM users  WHERE u_un = '" + username + "' AND u_pass = '" + passs + "'";
+            String query = "SELECT * FROM users  WHERE u_un = '" + username + "'";
             ResultSet resultSet = dbc.getData(query);
            if(resultSet.next()){
+               
+               
+                 String hashedPass = resultSet.getString("u_pass");
+                 String rehashedPass =  passwordHasher.hashPassword(passs);
+                 
+                 System.out.println(""+hashedPass);
+                 System.out.println(""+rehashedPass);
+                 
+               if(hashedPass.equals(rehashedPass)){    
                status = resultSet.getString("status");
                type = resultSet.getString("u_type");
                Session sess = Session.getInstance();
@@ -43,17 +57,20 @@ public class loginForm extends javax.swing.JFrame {
                sess.setU_type(resultSet.getString("u_type"));
                sess.setU_email(resultSet.getString("u_email"));
                sess. setU_un(resultSet.getString("u_un"));
-
-
-               
                return true;
-           }else{
-               return false;
-           }
-        }catch (SQLException ex) {
-            return false;
+               
+         }else{
+         return false;
+ }
+  
+        }else{
+         return false;
+        }
+        }catch (SQLException | NoSuchAlgorithmException ex) {
+         return false;
         }
    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

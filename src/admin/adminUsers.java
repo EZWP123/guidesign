@@ -25,6 +25,7 @@ public class adminUsers extends javax.swing.JFrame {
     public adminUsers() {
         initComponents();
         displayData();
+        
     }
     Color navcolor = new Color(255,255,255);
     Color hovercolor = new Color(0,204,204);
@@ -32,7 +33,7 @@ public class adminUsers extends javax.swing.JFrame {
     public void displayData(){
         try{
             dbConnect dbc = new dbConnect();
-            ResultSet rs = dbc.getData("SELECT u_fname, u_lname, u_contact, u_email, status FROM users");
+            ResultSet rs = dbc.getData("SELECT u_id, u_fname, u_lname, u_contact, u_email, status FROM users");
             usersTable.setModel(DbUtils.resultSetToTableModel(rs));
              rs.close();
         }catch(SQLException ex){
@@ -79,7 +80,7 @@ public class adminUsers extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Welcome To Admin DashBoard!");
+        jLabel1.setText("Welcome To Users Form");
         Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 840, 80));
 
         Mainpanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 80));
@@ -253,7 +254,17 @@ this.dispose();
             if(rs.next()){   
                 
                  addUser au = new addUser();
+                 au.uid.setText(""+rs.getInt("u_id"));
                   au.fname.setText(""+rs.getString("u_fname"));
+                  au.lname.setText(""+rs.getString("u_lname"));
+                  au.phone.setText(""+rs.getString("u_contact")); 
+                  au.email.setText(""+rs.getString("u_email"));
+                  au.un.setText(""+rs.getString("u_un"));
+                  au.pass.setText(""+rs.getString("u_pass"));
+                  au.type.setSelectedItem(""+rs.getString("u_type"));
+                  au.ut.setSelectedItem(""+rs.getString("status"));
+                  au.add.setEnabled(false);
+                  au.update.setEnabled(true);
                    au.setVisible(true);
                    this.dispose();
             }  

@@ -36,7 +36,9 @@ public class UserDashboard extends javax.swing.JFrame {
         Mainpanel = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        gouser = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -70,20 +72,25 @@ public class UserDashboard extends javax.swing.JFrame {
 
         Mainpanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 80));
 
-        gouser.setBackground(new java.awt.Color(102, 102, 102));
-        gouser.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        gouser.setText("USER");
-        gouser.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Reservation");
+        Mainpanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, 150, 60));
+
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                gouserMouseClicked(evt);
+                jPanel1MouseClicked(evt);
             }
         });
-        gouser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gouserActionPerformed(evt);
-            }
-        });
-        Mainpanel.add(gouser, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 130, 50));
+        jPanel1.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("ACCOUNT");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(50, 170, 150, 60);
+
+        Mainpanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 260, 250, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,17 +118,8 @@ public class UserDashboard extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void gouserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gouserMouseClicked
-        adminUsers adu = new adminUsers();
-        adu.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_gouserMouseClicked
-
-    private void gouserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gouserActionPerformed
-
-    }//GEN-LAST:event_gouserActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
       Session sess = Session.getInstance();
@@ -135,6 +133,12 @@ acc_name.setText(""+sess.getU_fname());
 
     }                   // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
+
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        accountDetails accd = new accountDetails();
+        accd.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jPanel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -175,8 +179,10 @@ acc_name.setText(""+sess.getU_fname());
     private javax.swing.JPanel Header;
     private javax.swing.JPanel Mainpanel;
     private javax.swing.JLabel acc_name;
-    private javax.swing.JButton gouser;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel navi;
     // End of variables declaration//GEN-END:variables
 }

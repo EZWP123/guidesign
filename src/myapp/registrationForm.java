@@ -4,6 +4,8 @@ package myapp;
 import admin.adminUsers;
 import myapp.loginForm;
 import config.dbConnect;
+import config.passwordHasher;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashSet;
@@ -322,9 +324,14 @@ public class registrationForm extends javax.swing.JFrame {
         
     } else {
         dbConnect dbc = new dbConnect();
+        
+       try{
+        String password = passwordHasher.hashPassword(pass.getText());
+        
+        
         if(dbc.insertData("INSERT INTO users (u_fname, u_lname, u_contact, u_email, u_un, u_pass, u_type, status)"
                 + "VALUES('" + fname.getText() + "','" + lname.getText() + "', '" + phone.getText() + "',"
-                + " '" + email.getText() + "', '" + un.getText() + "', '" + pass.getText() + "',"
+                + " '" + email.getText() + "', '" + un.getText() + "', '" + password+ "',"
                 + " '" + type.getSelectedItem() + "', 'Pending')")==0)
         {
              JOptionPane.showMessageDialog(null, "Registered Successfully!");
@@ -333,11 +340,15 @@ public class registrationForm extends javax.swing.JFrame {
             this.dispose();
         } else {
            JOptionPane.showMessageDialog(null, "Registered Successfully!");
-           
-        }
+           loginForm lf = new loginForm();
+           lf.setVisible(true);
+           this.dispose();
+        }  
+        }catch(NoSuchAlgorithmException ex){
+            System.out.println(""+ex);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    }
     private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_lnameActionPerformed
