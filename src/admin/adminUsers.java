@@ -28,7 +28,7 @@ public class adminUsers extends javax.swing.JFrame {
         
     }
     Color navcolor = new Color(255,255,255);
-    Color hovercolor = new Color(0,204,204);
+    Color hovercolor = new Color(103,10,10);
 
     public void displayData(){
         try{
@@ -61,6 +61,7 @@ public class adminUsers extends javax.swing.JFrame {
         delete = new javax.swing.JButton();
         p_add = new javax.swing.JButton();
         edit = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -69,47 +70,51 @@ public class adminUsers extends javax.swing.JFrame {
             }
         });
 
-        Mainpanel.setBackground(new java.awt.Color(0, 153, 153));
+        Mainpanel.setBackground(new java.awt.Color(122, 0, 0));
         Mainpanel.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
         Mainpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Header.setBackground(new java.awt.Color(0, 204, 204));
+        Header.setBackground(new java.awt.Color(92, 0, 0));
         Header.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
         Header.setForeground(new java.awt.Color(255, 204, 102));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Welcome To Users Form");
         Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 840, 80));
 
         Mainpanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 80));
 
-        navi.setBackground(new java.awt.Color(0, 102, 102));
+        navi.setBackground(new java.awt.Color(103, 10, 10));
         navi.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
         navi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        navi.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 230, 12));
+        navi.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 280, 12));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("USERS");
         navi.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 90, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Current User:");
         navi.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 280, 40));
 
         acc_id.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_id.setForeground(new java.awt.Color(255, 255, 255));
         acc_id.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acc_id.setText("ID");
         navi.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 280, 40));
 
-        Mainpanel.add(navi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 280, 570));
+        Mainpanel.add(navi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 280, 580));
 
-        usersTable.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        usersTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         usersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -120,11 +125,12 @@ public class adminUsers extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(usersTable);
 
-        Mainpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 700, 430));
+        Mainpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 700, 430));
 
         delete.setBackground(new java.awt.Color(255, 255, 255));
         delete.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         delete.setText("DELETE");
+        delete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         delete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 deleteMouseClicked(evt);
@@ -146,6 +152,7 @@ public class adminUsers extends javax.swing.JFrame {
         p_add.setBackground(new java.awt.Color(255, 255, 255));
         p_add.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         p_add.setText("ADD");
+        p_add.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         p_add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 p_addMouseClicked(evt);
@@ -167,6 +174,7 @@ public class adminUsers extends javax.swing.JFrame {
         edit.setBackground(new java.awt.Color(255, 255, 255));
         edit.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         edit.setText("EDIT");
+        edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 editMouseClicked(evt);
@@ -185,14 +193,15 @@ public class adminUsers extends javax.swing.JFrame {
         });
         Mainpanel.add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 100, 40));
 
+        jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        Mainpanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 730, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -353,6 +362,7 @@ this.dispose();
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel navi;
     private javax.swing.JButton p_add;
     private javax.swing.JTable usersTable;

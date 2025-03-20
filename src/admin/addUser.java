@@ -46,6 +46,7 @@ public class addUser extends javax.swing.JFrame {
         Mainpanel = new javax.swing.JPanel();
         navi = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        uid = new javax.swing.JTextField();
         fname = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         lname = new javax.swing.JTextField();
@@ -59,7 +60,6 @@ public class addUser extends javax.swing.JFrame {
         pass = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
         type = new javax.swing.JComboBox<>();
-        refresh = new javax.swing.JButton();
         ut = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         lnlab = new javax.swing.JLabel();
@@ -68,193 +68,37 @@ public class addUser extends javax.swing.JFrame {
         emlab = new javax.swing.JLabel();
         phonelab = new javax.swing.JLabel();
         userlab = new javax.swing.JLabel();
-        uid = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         add = new javax.swing.JButton();
         update = new javax.swing.JButton();
         delete1 = new javax.swing.JButton();
-        clear1 = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
-        Header = new javax.swing.JPanel();
+        clear1 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(0, 0));
+        setPreferredSize(new java.awt.Dimension(545, 675));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Mainpanel.setBackground(new java.awt.Color(0, 153, 153));
-        Mainpanel.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(51, 51, 0)));
+        Mainpanel.setBackground(new java.awt.Color(92, 0, 0));
+        Mainpanel.setMinimumSize(new java.awt.Dimension(0, 0));
+        Mainpanel.setPreferredSize(new java.awt.Dimension(0, 0));
         Mainpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        navi.setBackground(new java.awt.Color(0, 102, 102));
+        navi.setBackground(new java.awt.Color(103, 10, 10));
         navi.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
+        navi.setMinimumSize(new java.awt.Dimension(0, 0));
         navi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("First Name:");
-        navi.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 90, 50));
-
-        fname.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        fname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        fname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fnameActionPerformed(evt);
-            }
-        });
-        fname.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                fnameKeyReleased(evt);
-            }
-        });
-        navi.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 260, 30));
-
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel6.setText("Last Name:");
-        navi.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 90, 50));
-
-        lname.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        lname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lnameActionPerformed(evt);
-            }
-        });
-        lname.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lnameKeyReleased(evt);
-            }
-        });
-        navi.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 260, 30));
-
-        jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel10.setText("Contact:");
-        navi.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 110, 40));
-
-        phone.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        phone.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        phone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                phoneActionPerformed(evt);
-            }
-        });
-        phone.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                phoneKeyReleased(evt);
-            }
-        });
-        navi.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 260, 30));
-
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel7.setText("Email:");
-        navi.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 90, 40));
-
-        email.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        email.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
-            }
-        });
-        email.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                emailKeyReleased(evt);
-            }
-        });
-        navi.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 260, 30));
-
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel4.setText("Username:");
-        navi.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 90, 40));
-
-        un.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        un.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        un.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unActionPerformed(evt);
-            }
-        });
-        un.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                unKeyReleased(evt);
-            }
-        });
-        navi.add(un, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 260, 30));
-
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel11.setText("Password:");
-        navi.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 90, 40));
-
-        pass.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passActionPerformed(evt);
-            }
-        });
-        pass.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                passKeyReleased(evt);
-            }
-        });
-        navi.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 260, 30));
-
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel5.setText("Type:");
-        navi.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 90, 40));
-
-        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User", "" }));
-        navi.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 260, 30));
-
-        refresh.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        refresh.setText("REFRESH");
-        refresh.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                refreshMouseClicked(evt);
-            }
-        });
-        refresh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshActionPerformed(evt);
-            }
-        });
-        navi.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 110, 40));
-
-        ut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Pending" }));
-        navi.add(ut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, 260, 30));
-
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel9.setText("User Status:");
-        navi.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 90, 40));
-
-        lnlab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
-        lnlab.setForeground(new java.awt.Color(204, 0, 0));
-        lnlab.setText(" ");
-        navi.add(lnlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 170, -1));
-
-        pslab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
-        pslab.setForeground(new java.awt.Color(204, 0, 0));
-        pslab.setText(" ");
-        navi.add(pslab, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 170, -1));
-
-        fnlab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
-        fnlab.setForeground(new java.awt.Color(204, 0, 0));
-        fnlab.setText(" ");
-        navi.add(fnlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 170, -1));
-
-        emlab.setForeground(new java.awt.Color(204, 0, 0));
-        emlab.setText(" ");
-        navi.add(emlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 170, -1));
-
-        phonelab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
-        phonelab.setForeground(new java.awt.Color(204, 0, 0));
-        phonelab.setText(" ");
-        navi.add(phonelab, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 260, -1));
-
-        userlab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
-        userlab.setForeground(new java.awt.Color(204, 0, 0));
-        userlab.setText(" ");
-        navi.add(userlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 170, -1));
+        navi.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 90, 50));
 
         uid.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         uid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        uid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         uid.setEnabled(false);
         uid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -266,17 +110,186 @@ public class addUser extends javax.swing.JFrame {
                 uidKeyReleased(evt);
             }
         });
-        navi.add(uid, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 260, 30));
+        navi.add(uid, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 260, 30));
+
+        fname.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        fname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        fname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        fname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fnameActionPerformed(evt);
+            }
+        });
+        fname.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                fnameKeyReleased(evt);
+            }
+        });
+        navi.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 260, 30));
+
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Last Name:");
+        navi.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 90, 50));
+
+        lname.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        lname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        lname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lnameActionPerformed(evt);
+            }
+        });
+        lname.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                lnameKeyReleased(evt);
+            }
+        });
+        navi.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 260, 30));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Contact:");
+        navi.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 110, 40));
+
+        phone.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        phone.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        phone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        phone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                phoneActionPerformed(evt);
+            }
+        });
+        phone.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                phoneKeyReleased(evt);
+            }
+        });
+        navi.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 260, 30));
+
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Email:");
+        navi.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 90, 40));
+
+        email.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        email.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        email.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailActionPerformed(evt);
+            }
+        });
+        email.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                emailKeyReleased(evt);
+            }
+        });
+        navi.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 260, 30));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Username:");
+        navi.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 90, 40));
+
+        un.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        un.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        un.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        un.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unActionPerformed(evt);
+            }
+        });
+        un.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                unKeyReleased(evt);
+            }
+        });
+        navi.add(un, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 260, 30));
+
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Password:");
+        navi.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 90, 40));
+
+        pass.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        pass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passActionPerformed(evt);
+            }
+        });
+        pass.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                passKeyReleased(evt);
+            }
+        });
+        navi.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 260, 30));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Type:");
+        navi.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 90, 40));
+
+        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User", "" }));
+        type.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        navi.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 260, 30));
+
+        ut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Pending" }));
+        ut.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        navi.add(ut, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 260, 30));
+
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("User Status:");
+        navi.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, 90, 40));
+
+        lnlab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
+        lnlab.setForeground(new java.awt.Color(204, 0, 0));
+        lnlab.setText(" ");
+        navi.add(lnlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 170, -1));
+
+        pslab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
+        pslab.setForeground(new java.awt.Color(204, 0, 0));
+        pslab.setText(" ");
+        navi.add(pslab, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 170, -1));
+
+        fnlab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
+        fnlab.setForeground(new java.awt.Color(204, 0, 0));
+        fnlab.setText(" ");
+        navi.add(fnlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 170, -1));
+
+        emlab.setForeground(new java.awt.Color(204, 0, 0));
+        emlab.setText(" ");
+        navi.add(emlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 170, -1));
+
+        phonelab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
+        phonelab.setForeground(new java.awt.Color(204, 0, 0));
+        phonelab.setText(" ");
+        navi.add(phonelab, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 260, -1));
+
+        userlab.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
+        userlab.setForeground(new java.awt.Color(204, 0, 0));
+        userlab.setText(" ");
+        navi.add(userlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 170, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("User ID:");
-        navi.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 90, 50));
+        navi.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 90, 50));
+
+        Mainpanel.add(navi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 530, 540));
 
         add.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         add.setText("ADD");
+        add.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addMouseEntered(evt);
             }
         });
         add.addActionListener(new java.awt.event.ActionListener() {
@@ -284,10 +297,11 @@ public class addUser extends javax.swing.JFrame {
                 addActionPerformed(evt);
             }
         });
-        navi.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 500, 110, 40));
+        Mainpanel.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 110, 40));
 
         update.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         update.setText("EDIT");
+        update.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         update.setEnabled(false);
         update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -299,10 +313,11 @@ public class addUser extends javax.swing.JFrame {
                 updateActionPerformed(evt);
             }
         });
-        navi.add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 110, 40));
+        Mainpanel.add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 110, 40));
 
         delete1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         delete1.setText("DELETE");
+        delete1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         delete1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 delete1MouseClicked(evt);
@@ -313,24 +328,11 @@ public class addUser extends javax.swing.JFrame {
                 delete1ActionPerformed(evt);
             }
         });
-        navi.add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, 110, 40));
-
-        clear1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        clear1.setText("CLEAR");
-        clear1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                clear1MouseClicked(evt);
-            }
-        });
-        clear1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clear1ActionPerformed(evt);
-            }
-        });
-        navi.add(clear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 110, 40));
+        Mainpanel.add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, 110, 40));
 
         cancel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         cancel.setText("CANCEL");
+        cancel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         cancel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cancelMouseClicked(evt);
@@ -341,20 +343,268 @@ public class addUser extends javax.swing.JFrame {
                 cancelActionPerformed(evt);
             }
         });
-        navi.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 110, 40));
+        Mainpanel.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 110, 40));
 
-        Mainpanel.add(navi, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 80, 520, 570));
+        clear1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        clear1.setText("CLEAR");
+        clear1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        clear1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                clear1MouseClicked(evt);
+            }
+        });
+        clear1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clear1ActionPerformed(evt);
+            }
+        });
+        Mainpanel.add(clear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 110, 40));
 
-        Header.setBackground(new java.awt.Color(0, 204, 204));
-        Header.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
-        Header.setLayout(null);
-        Mainpanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 80));
+        back.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        back.setText("BACK");
+        back.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        Mainpanel.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 110, 40));
 
-        getContentPane().add(Mainpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 0, 500, -1));
+        getContentPane().add(Mainpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 690));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
+        adminUsers au = new adminUsers();
+        au.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_cancelActionPerformed
+
+    private void cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cancelMouseClicked
+
+    private void clear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clear1ActionPerformed
+
+    private void clear1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clear1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clear1MouseClicked
+
+    private void delete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_delete1ActionPerformed
+
+    private void delete1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_delete1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_delete1MouseClicked
+
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
+
+        if (fname.getText().isEmpty()
+            || lname.getText().isEmpty()
+            || phone.getText().isEmpty()
+            || email.getText().isEmpty()
+            || un.getText().isEmpty()
+            || pass.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields are required");
+
+        }else if(pass.getText().length()<8){
+            JOptionPane.showMessageDialog(null, "password character should be 8 above");
+            pass.setText("");
+
+        } else if (updateCheck()) {
+            System.out.println("Duplicate Exist");
+
+        } else {
+
+            dbConnect dbc = new dbConnect();
+            dbc.updateData("UPDATE users SET u_fname = '"+fname.getText()+"',"
+                + " u_lname = '"+lname.getText()+"',u_contact = '"+phone.getText()+"',"
+                + "u_type = '"+type.getSelectedItem()+"',u_email ='"+email.getText()+"',"
+                + "u_un = '"+un.getText()+"', u_pass = '"+pass.getText()+"',"
+                + "status = '"+ut.getSelectedItem()+"'WHERE u_id = '"+uid.getText()+"'");
+
+            adminUsers au = new adminUsers();
+            au.setVisible(true);
+            this.dispose();
+
+        }
+    }//GEN-LAST:event_updateActionPerformed
+
+    private void updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateMouseClicked
+
+    }//GEN-LAST:event_updateMouseClicked
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+
+        if (fname.getText().isEmpty()
+            || lname.getText().isEmpty()
+            || phone.getText().isEmpty()
+            || email.getText().isEmpty()
+            || un.getText().isEmpty()
+            || pass.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields are required");
+
+        }else if(pass.getText().length()<8){
+            JOptionPane.showMessageDialog(null, "password character should be 8 above");
+            pass.setText("");
+
+        } else if (duplicateCheck()) {
+            System.out.println("Duplicate Exist");
+
+        } else {
+            dbConnect dbc = new dbConnect();
+            if(dbc.insertData("INSERT INTO users (u_fname, u_lname, u_contact, u_email, u_un, u_pass, u_type, status)"
+                + "VALUES('" + fname.getText() + "','" + lname.getText() + "', '" + phone.getText() + "',"
+                + " '" + email.getText() + "', '" + un.getText() + "', '" + pass.getText() + "',"
+                + " '" + type.getSelectedItem() + "', '"+ut.getSelectedItem()+"')")==0)
+        {
+            JOptionPane.showMessageDialog(null, "Registered Successfully!");
+            adminUsers au = new adminUsers();
+            au.setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Registered Successfully!");
+ adminUsers au = new adminUsers();
+            au.setVisible(true);
+            this.dispose();
+        }
+        }
+    }//GEN-LAST:event_addActionPerformed
+
+    private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addMouseClicked
+
+    private void uidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uidKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_uidKeyReleased
+
+    private void uidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_uidActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+
+    }//GEN-LAST:event_backActionPerformed
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+              adminUsers au = new adminUsers();
+        au.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backMouseClicked
+
+    private void passKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passKeyReleased
+        String PATTERN = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d!@#$%^&*()_+\\-=]{8,30}$";
+        Pattern pt = Pattern.compile(PATTERN);
+        Matcher match = pt.matcher(pass.getText());
+        if (!match.matches()){
+            pslab.setText("Password too short, at least be 8 characters long");
+        }
+        else{
+            pslab.setText(null);
+        }
+    }//GEN-LAST:event_passKeyReleased
+
+    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+
+    }//GEN-LAST:event_passActionPerformed
+
+    private void unKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_unKeyReleased
+        String USERNAME_PATTERN = "^[a-zA-Z0-9._]{5,20}$";
+        Pattern pt = Pattern.compile(USERNAME_PATTERN);
+        Matcher match = pt.matcher(un.getText());
+
+        if (!match.matches()) {
+            userlab.setText("Invalid username, try again...");
+        } else if (existingUsernames.contains(un.getText())) {
+            userlab.setText("Username already exists...");
+        } else {
+            userlab.setText(null);
+        }
+    }//GEN-LAST:event_unKeyReleased
+
+    private void unActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_unActionPerformed
+
+    private void emailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailKeyReleased
+        String EMAIL_PATTERN = "^[a-zA-Z]{0,30}[@][a-zA-Z0-9]{0,10}[.][a-zA-Z]{0,5}$";
+        Pattern pt = Pattern.compile(EMAIL_PATTERN);
+        Matcher match = pt.matcher(email.getText());
+
+        if (!match.matches()) {
+            emlab.setText("Invalid email format.");
+        } else {
+            emlab.setText(null);
+        }
+    }//GEN-LAST:event_emailKeyReleased
+
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailActionPerformed
+
+    private void phoneKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phoneKeyReleased
+        String PATTERN = "^09\\d{9}$";
+        Pattern pt = Pattern.compile(PATTERN);
+        Matcher match = pt.matcher(phone.getText());
+
+        if (!match.matches()) {
+            phonelab.setText("Phone number must be 11 digits.");
+        } else {
+            phonelab.setText(null);
+        }
+    }//GEN-LAST:event_phoneKeyReleased
+
+    private void phoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneActionPerformed
+
+    private void lnameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lnameKeyReleased
+        String PATTERN = "^[a-zA-Z ]{2,30}$";
+        Pattern pt = Pattern.compile(PATTERN);
+        Matcher match = pt.matcher(fname.getText());
+        if (!match.matches()){
+            lnlab.setText("Last Name is incorrect");
+        }
+        else{
+            lnlab.setText(null);
+        }
+    }//GEN-LAST:event_lnameKeyReleased
+
+    private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lnameActionPerformed
+
+    private void fnameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fnameKeyReleased
+        // TODO add your handling code here:
+        String PATTERN = "^[a-zA-Z ]{2,30}$";
+        Pattern pt = Pattern.compile(PATTERN);
+        Matcher match = pt.matcher(fname.getText());
+
+        if (!match.matches()) {
+            fnlab.setText("First Name is incorrect..");
+        } else {
+            fnlab.setText(null);
+        }
+    }//GEN-LAST:event_fnameKeyReleased
+
+    private void fnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fnameActionPerformed
+
+    private void addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addMouseEntered
       public boolean duplicateCheck() {
     dbConnect dbc = new dbConnect();
     try {
@@ -412,232 +662,9 @@ public class addUser extends javax.swing.JFrame {
       }
       
       }
-      
-    private void unActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_unActionPerformed
-
-    private void unKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_unKeyReleased
-        String USERNAME_PATTERN = "^[a-zA-Z0-9._]{5,20}$";
-        Pattern pt = Pattern.compile(USERNAME_PATTERN);
-        Matcher match = pt.matcher(un.getText());
-
-        if (!match.matches()) {
-            userlab.setText("Invalid username, try again...");
-        } else if (existingUsernames.contains(un.getText())) {
-            userlab.setText("Username already exists...");
-        } else {
-            userlab.setText(null);
-        }
-    }//GEN-LAST:event_unKeyReleased
-
-    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
-
-    }//GEN-LAST:event_passActionPerformed
-
-    private void passKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passKeyReleased
-        String PATTERN = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d!@#$%^&*()_+\\-=]{8,30}$";
-        Pattern pt = Pattern.compile(PATTERN);
-        Matcher match = pt.matcher(pass.getText());
-        if (!match.matches()){
-            pslab.setText("Password too short, at least be 8 characters long");
-        }
-        else{
-            pslab.setText(null);
-        }
-    }//GEN-LAST:event_passKeyReleased
-
-    private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
-
-      
-      
-    }//GEN-LAST:event_refreshActionPerformed
-
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
-
-    private void emailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailKeyReleased
-        String EMAIL_PATTERN = "^[a-zA-Z]{0,30}[@][a-zA-Z0-9]{0,10}[.][a-zA-Z]{0,5}$";
-        Pattern pt = Pattern.compile(EMAIL_PATTERN);
-        Matcher match = pt.matcher(email.getText());
-
-        if (!match.matches()) {
-            emlab.setText("Invalid email format.");
-        } else {
-            emlab.setText(null);
-        }
-    }//GEN-LAST:event_emailKeyReleased
-
-    private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lnameActionPerformed
-
-    private void lnameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lnameKeyReleased
-        String PATTERN = "^[a-zA-Z ]{2,30}$";
-        Pattern pt = Pattern.compile(PATTERN);
-        Matcher match = pt.matcher(fname.getText());
-        if (!match.matches()){
-            lnlab.setText("Last Name is incorrect");
-        }
-        else{
-            lnlab.setText(null);
-        }
-
-    }//GEN-LAST:event_lnameKeyReleased
- private static HashSet<String> existingEmails = new HashSet<>();
+       private static HashSet<String> existingEmails = new HashSet<>();
     private static HashSet<String> existingUsernames = new HashSet<>();
     
-    private void fnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fnameActionPerformed
-
-    private void fnameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fnameKeyReleased
-        // TODO add your handling code here:
-        String PATTERN = "^[a-zA-Z ]{2,30}$";
-        Pattern pt = Pattern.compile(PATTERN);
-        Matcher match = pt.matcher(fname.getText());
-
-        if (!match.matches()) {
-            fnlab.setText("First Name is incorrect..");
-        } else {
-            fnlab.setText(null);
-        }
-
-    }//GEN-LAST:event_fnameKeyReleased
-
-    private void phoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_phoneActionPerformed
-
-    private void phoneKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phoneKeyReleased
-        String PATTERN = "^09\\d{9}$";
-        Pattern pt = Pattern.compile(PATTERN);
-        Matcher match = pt.matcher(phone.getText());
-
-        if (!match.matches()) {
-            phonelab.setText("Phone number must be 11 digits.");
-        } else {
-            phonelab.setText(null);
-        }
-    }//GEN-LAST:event_phoneKeyReleased
-
-    private void uidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uidActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_uidActionPerformed
-
-    private void uidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uidKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_uidKeyReleased
-
-    private void refreshMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refreshMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_refreshMouseClicked
-
-    private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addMouseClicked
-
-    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-         
-        if (fname.getText().isEmpty() 
-        || lname.getText().isEmpty() 
-        || phone.getText().isEmpty() 
-        || email.getText().isEmpty()
-        || un.getText().isEmpty() 
-        || pass.getText().isEmpty()) {
-        JOptionPane.showMessageDialog(null, "All fields are required");
-        
-        }else if(pass.getText().length()<8){
-            JOptionPane.showMessageDialog(null, "password character should be 8 above");
-            pass.setText("");
-            
-    } else if (duplicateCheck()) {
-        System.out.println("Duplicate Exist");
-        
-    } else {
-        dbConnect dbc = new dbConnect();
-        if(dbc.insertData("INSERT INTO users (u_fname, u_lname, u_contact, u_email, u_un, u_pass, u_type, status)"
-                + "VALUES('" + fname.getText() + "','" + lname.getText() + "', '" + phone.getText() + "',"
-                + " '" + email.getText() + "', '" + un.getText() + "', '" + pass.getText() + "',"
-                + " '" + type.getSelectedItem() + "', '"+ut.getSelectedItem()+"')")==0)
-        {
-             JOptionPane.showMessageDialog(null, "Registered Successfully!");
-            adminUsers au = new adminUsers();
-            au.setVisible(true);
-            this.dispose();
-        } else {
-           JOptionPane.showMessageDialog(null, "Registered Successfully!");
-           
-        }
-        }
-    }//GEN-LAST:event_addActionPerformed
-
-    private void updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateMouseClicked
-       
-    }//GEN-LAST:event_updateMouseClicked
-
-    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
-
-           
-        if (fname.getText().isEmpty() 
-        || lname.getText().isEmpty() 
-        || phone.getText().isEmpty() 
-        || email.getText().isEmpty()
-        || un.getText().isEmpty() 
-        || pass.getText().isEmpty()) {
-        JOptionPane.showMessageDialog(null, "All fields are required");
-        
-        }else if(pass.getText().length()<8){
-            JOptionPane.showMessageDialog(null, "password character should be 8 above");
-            pass.setText("");
-            
-    } else if (updateCheck()) {
-        System.out.println("Duplicate Exist");
-        
-    } else {
-        
-        dbConnect dbc = new dbConnect();
-       dbc.updateData("UPDATE users SET u_fname = '"+fname.getText()+"',"
-               + " u_lname = '"+lname.getText()+"',u_contact = '"+phone.getText()+"',"
-                       + "u_type = '"+type.getSelectedItem()+"',u_email ='"+email.getText()+"',"
-                               + "u_un = '"+un.getText()+"', u_pass = '"+pass.getText()+"',"
-                                       + "status = '"+ut.getSelectedItem()+"'WHERE u_id = '"+uid.getText()+"'");
-       
-        
-            adminUsers au = new adminUsers();
-            au.setVisible(true);
-            this.dispose();
-       
-    }
-    }//GEN-LAST:event_updateActionPerformed
-
-    private void delete1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_delete1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_delete1MouseClicked
-
-    private void delete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_delete1ActionPerformed
-
-    private void clear1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clear1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clear1MouseClicked
-
-    private void clear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clear1ActionPerformed
-
-    private void cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cancelMouseClicked
-
-    private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-        adminUsers au = new adminUsers();
-        au.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_cancelActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -674,9 +701,9 @@ public class addUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Header;
     private javax.swing.JPanel Mainpanel;
     public javax.swing.JButton add;
+    private javax.swing.JButton back;
     private javax.swing.JButton cancel;
     private javax.swing.JButton clear1;
     private javax.swing.JButton delete1;
@@ -700,7 +727,6 @@ public class addUser extends javax.swing.JFrame {
     public javax.swing.JTextField phone;
     private javax.swing.JLabel phonelab;
     private javax.swing.JLabel pslab;
-    private javax.swing.JButton refresh;
     public javax.swing.JComboBox<String> type;
     public javax.swing.JTextField uid;
     public javax.swing.JTextField un;

@@ -46,41 +46,45 @@ public class adminDashboard extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        navi.setBackground(new java.awt.Color(0, 102, 102));
+        navi.setBackground(new java.awt.Color(103, 10, 10));
         navi.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
         navi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         acc_name.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_name.setForeground(new java.awt.Color(255, 255, 255));
         acc_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acc_name.setText("ADMIN");
         navi.add(acc_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 270, 40));
 
         acc_lname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_lname.setForeground(new java.awt.Color(255, 255, 255));
         acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acc_lname.setText("ADMIN");
         navi.add(acc_lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 270, 40));
 
         getContentPane().add(navi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 280, 570));
 
-        Mainpanel.setBackground(new java.awt.Color(0, 153, 153));
+        Mainpanel.setBackground(new java.awt.Color(122, 0, 0));
         Mainpanel.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
         Mainpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Header.setBackground(new java.awt.Color(0, 204, 204));
+        Header.setBackground(new java.awt.Color(92, 0, 0));
         Header.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
         Header.setForeground(new java.awt.Color(255, 204, 102));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Welcome to Admin Dashboard");
-        Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 840, 80));
+        Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 430, 80));
 
-        Mainpanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 80));
+        Mainpanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 80));
 
         gouser.setBackground(new java.awt.Color(102, 102, 102));
         gouser.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         gouser.setText("USERS");
+        gouser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         gouser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 gouserMouseClicked(evt);
@@ -91,9 +95,9 @@ public class adminDashboard extends javax.swing.JFrame {
                 gouserActionPerformed(evt);
             }
         });
-        Mainpanel.add(gouser, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, 130, 50));
+        Mainpanel.add(gouser, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 120, 40));
 
-        getContentPane().add(Mainpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 650));
+        getContentPane().add(Mainpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 650));
 
         pack();
         setLocationRelativeTo(null);

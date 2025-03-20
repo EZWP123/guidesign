@@ -31,14 +31,14 @@ public class UserDashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        navi = new javax.swing.JPanel();
-        acc_name = new javax.swing.JLabel();
         Mainpanel = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        navi = new javax.swing.JPanel();
+        acc_name = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -47,18 +47,9 @@ public class UserDashboard extends javax.swing.JFrame {
             }
         });
 
-        navi.setBackground(new java.awt.Color(0, 102, 102));
-        navi.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
-        navi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        acc_name.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        acc_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        acc_name.setText("User");
-        navi.add(acc_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 300, 50));
-
         Mainpanel.setBackground(new java.awt.Color(0, 153, 153));
         Mainpanel.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
-        Mainpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Mainpanel.setLayout(null);
 
         Header.setBackground(new java.awt.Color(0, 204, 204));
         Header.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
@@ -70,12 +61,14 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel1.setText("Welcome to User Dashboard");
         Header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 840, 80));
 
-        Mainpanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 80));
+        Mainpanel.add(Header);
+        Header.setBounds(0, 0, 1010, 80);
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Reservation");
-        Mainpanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, 150, 60));
+        Mainpanel.add(jLabel3);
+        jLabel3.setBounds(380, 430, 150, 60);
 
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,31 +83,33 @@ public class UserDashboard extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(50, 170, 150, 60);
 
-        Mainpanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 260, 250, 240));
+        Mainpanel.add(jPanel1);
+        jPanel1.setBounds(710, 260, 250, 240);
+
+        navi.setBackground(new java.awt.Color(0, 102, 102));
+        navi.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(0, 0, 0)));
+        navi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        acc_name.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        acc_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_name.setText("User");
+        navi.add(acc_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 300, 50));
+
+        Mainpanel.add(navi);
+        navi.setBounds(0, 0, 300, 650);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(navi, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 712, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 80, Short.MAX_VALUE)
-                .addComponent(navi, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Mainpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
